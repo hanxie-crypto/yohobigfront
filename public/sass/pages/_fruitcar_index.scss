@@ -1,0 +1,165 @@
+$colorGrey: #B3B3B3;
+.index_header {
+	height: 100rem /$pxConvertRem;
+	line-height: 100rem / $pxConvertRem;
+	h3 {
+		text-align: center;
+		font-size: 28rem /$pxConvertRem;
+	}
+}
+.logowrapper {
+	text-align: center;
+	padding-top: 15rem /$pxConvertRem;
+}
+.search-logo {
+	margin: 0 auto;
+	height: 100%;
+	background-image: url(../img/search.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 38rem / $pxConvertRem;
+	height: 44rem / $pxConvertRem;
+	line-height: 44rem / $pxConvertRem;
+}
+.search-word ,
+.user-word,
+{
+	margin-top: 5rem / $pxConvertRem;
+	display: block;
+	font-size: 20rem / $pxConvertRem;
+	height: 20rem / $pxConvertRem;
+	line-height: 20rem / $pxConvertRem;
+	color: #808080;
+}
+.user-logo {
+	margin: 0 auto;
+	background-image: url(../img/user.png);
+	background-repeat: no-repeat;
+	background-position: center 0;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 38rem / $pxConvertRem;
+	height: 44rem / $pxConvertRem;
+	line-height: 44rem / $pxConvertRem;
+}
+.index_navbar {
+	background-color: $colorGrey;
+	height: 80rem / $pxConvertRem;
+}
+.cate-word {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 80rem / $pxConvertRem;
+	font-size: 28rem / $pxConvertRem;
+	color: #fff;
+	span {
+		display: block;
+		position: absolute;
+		top:20rem / $pxConvertRem;
+		right: 10rem / $pxConvertRem;
+		width: 0;
+		height: 40rem / $pxConvertRem;
+		border: 1px solid #fff;
+	}
+}
+
+.frutipic {
+	width: 160rem / $pxConvertRem;
+	height: 160rem / $pxConvertRem;
+	border-radius: 10rem / $pxConvertRem;
+	border: 1rem / $pxConvertRem solid #000;
+	overflow:hidden;
+	margin-left: 60rem / $pxConvertRem;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+.fruitprice {
+	  text-align: center;
+  	  width: 278rem / $pxConvertRem;
+  	  padding-top: 25rem / $pxConvertRem !important;
+	.numprice {
+		font-size: 45rem / $pxConvertRem;
+		color: #F15A24;
+	}
+	.unit {
+		font-size: 24rem / $pxConvertRem;
+		color: #F15A24;
+	}
+}
+.fruitbrandname {
+	font-size: 40rem / $pxConvertRem;
+	line-height: 40rem / $pxConvertRem;
+	text-align: left;
+	padding-left: 40rem / $pxConvertRem;
+}
+.fruitaddr {
+	margin-top: 20rem / $pxConvertRem !important;
+	height: 28rem / $pxConvertRem;
+	line-height: 28rem / $pxConvertRem;
+	span {
+		color: #808080;
+		font-size: 28rem / $pxConvertRem;
+	}
+}
+.tag-status
+ {
+ 	margin-left: 40rem / $pxConvertRem;
+	box-sizing: border-box;
+	display: inline-block;
+	float: left;
+	height: 40rem / $pxConvertRem;
+	line-height: 40rem / $pxConvertRem;
+	background-color: #00CE1E;
+	color: white;
+	font-size: 24rem / $pxConvertRem;
+	border-radius: 12rem / $pxConvertRem;
+	padding: 2rem / $pxConvertRem 12rem / $pxConvertRem;
+	text-align: center;
+}
+.fruitinfo {
+	margin-top: 22rem / $pxConvertRem !important;
+	padding-bottom: 13rem / $pxConvertRem;
+}
+.tag-endtime,
+.tag-line,
+.tag-sendtime{
+	display: inline-block;
+	float: left;
+	height: 40rem / $pxConvertRem;
+	line-height: 40rem / $pxConvertRem;
+	color: #00CE1E;
+	font-size: 20rem / $pxConvertRem;
+}
+.tag-endtime {
+	margin-left: 12rem / $pxConvertRem;
+}
+.tag-line {
+	margin-left: 12rem / $pxConvertRem;
+	width: 2rem / $pxConvertRem;
+}
+.tag-sendtime {
+	margin-left: 12rem / $pxConvertRem;
+}
+.line_bottom {
+	width: 87%;
+	height: 1px;
+	background-color: #ccc;
+	display: block;
+	margin-left: 40rem / $pxConvertRem;
+}
+.condationwrapper {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: white;
+	overflow: auto;
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>fruitmobile - fruitmobileserver</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="nico-spm 0.5.3" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link type="image/x-icon" href="/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="./static/css/normalize.css" />
+    <link rel="stylesheet" href="./static/css/site.css" />
+    <link rel="stylesheet" href="./static/css/site.css" />
+    <link rel="stylesheet" href="./static/css/solarized.css" />
+    <link rel="stylesheet" href="./static/css/codemirror.css" />
+<script>
+if (!location.port) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-50522089-2', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+<script src="./static/js/sea.js?nowrap"></script>
+
+<script>
+  seajs.config({
+    base: "./",
+    alias: {"jquery":"jquery/1.8.3/jquery.js","lazyload":"lazyload/1.9.6/jquery.lazyload.js"}
+  });
+</script>
+    <!--[if lt IE 9]>
+    <script src="./static/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body class="spmjs">
+    <div class="body-wrapper">
+      <aside class="sidebar-wrapper">
+      <h1>
+          <a href="./">Fruitmobile</a>
+      </h1>
+      <p class="sidebar-version">Version: <a href="http://spm.yoho.cn/package/fruitmobile" title="">1.0.0</a></p>
+        <p class="sidebar-description" data-keyword="">fruitmobile </p>
+        <ul class="sidebar-navigation" role="navigation">
+          <li><a href="./">Doc</a></li>
+          <li><a class="test-link" href="tests/runner.html" target="_blank">Test</a></li>
+        </ul>
+        
+
+        <div class="qrcode-wrapper">
+          <i class="icon">
+            <div class="icon-qrcode">
+              <svg width="1024" height="1024" viewBox="0 0 1024 1024">
+                <g class="transform-group">
+                  <g transform="translate(0, 18) scale(1, -1) scale(0.024, 0.024)">
+                    <path d="M116.8 792.062v0 0zM334.523 138.877v-72.569h-72.569v72.569h72.569zM334.523 574.339v-72.569h-72.569v72.569h72.569zM769.984 574.339v-72.569h-72.569v72.569h72.569zM189.369-5.705h217.723v217.167h-217.723v-217.167zM189.369 429.185h217.723v217.723h-217.723v-217.723zM624.831 429.185h217.723v217.723h-217.723v-217.723zM479.677 284.031v-362.877h-362.877v362.877h362.877zM769.984-6.277v-72.569h-72.569v72.569h72.569zM915.138-6.277v-72.569h-72.569v72.569h72.569zM915.138 284.031v-217.723h-217.723v72.569h-72.569v-217.723h-72.569v362.877h217.723v-72.569h72.569v72.569h72.569zM479.677 719.493v-362.877h-362.877v362.877h362.877zM915.138 719.493v-362.877h-362.877v362.877h362.877z" fill="#666"></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="qrcode" id="qrcode"></div>
+          </i>
+        </div>
+        <div class="footer-wrapper"><a target="_blank" href="http://spmjs.io">spmjs.io</a> /
+<a target="_blank" href="https://github.com/spmjs/spm">spm</a> /
+<a target="_blank" href="http://seajs.org">sea.js</a> /
+<a target="_blank" href="http://lab.lepture.com/nico/">nico-spm</a>
+        </div>
+      </aside>
+      <div class="content-wrapper">
+        
+<article class="hentry">
+  <h1 class="entry-title">fruitmobileserver</h1>
+  <div class="entry-content">
+    
+  </div>
+</article>
+
+      </div>
+      
+    </div>
+  </body>
+  <script src="./static/js/nprogress.js?nowrap"></script>
+  <script>
+  (function() {
+    NProgress.start();
+    window.onload = NProgress.done;
+    var ready = function(fn) {
+      var doc = document;
+      if(doc.addEventListener) {
+        doc.addEventListener('DOMContentLoaded', fn, false);
+      } else {
+        doc.attachEvent('onreadystatechange', fn);
+      }
+    };
+    ready(function() {
+      NProgress.inc(0.6);
+      seajs.use("./static/js/arale-qrcode.js?nowrap", function(QRCode) {
+        var url = location.href;
+        if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+          url = url.replace(location.hostname, '192.168.59.3');
+        }
+        var el = new QRCode({
+          text: url,
+          render: 'canvas',
+          width: 120,
+          height: 120
+        });
+        document.getElementById('qrcode').appendChild(el);
+      });
+    }, false);
+  })();
+
+  seajs.config({
+    alias: {
+      'jquery-for-spm-doc': 'http://tfs.alipayobjects.com/images/T1dQdeXjBhXXXXXXXX.js'
+    }
+  });
+
+  seajs.use(['jquery-for-spm-doc'], function($) {
+
+    $('h4 em, h3 em, h3 code, h4 code').parent().addClass('doc-api');
+
+    // 给 iframe 加链接
+    $('.nico-iframe').each(function(i, item) {
+      var src = $(item).find('iframe').attr('src')
+      var html = '<a class="new-window" target="_blank" href="' + src + '">Open</a>'
+      $(item).append(html)
+    });
+
+    $('.highlight').each(function(i, item) {
+      if ($(item).prev().hasClass('spm-doc-textarea')) {
+        var code = $(item).prev().val();
+        // Do not handle jsx code
+        if (code && code.indexOf('/** @jsx React.DOM */') > -1) {
+          return;
+        }
+        $(item).append('<div class="editor-toggle">Live Edit</div>');
+      }
+    });
+
+    // toggle editable status
+    $('.entry-content').on('click', '.editor-toggle', function(e) {
+      if (!this.editable) {
+        enterEditor(this);
+      } else {
+        quitEditor(this);
+      }
+    });
+
+    // 代码实时编辑功能
+    function CodeMirrorify(item) {
+      item = $(item);
+      var cm = CodeMirror.fromTextArea(item[0], {
+        lineNumbers: true,
+        mode: item.attr('mode')
+      });
+      var timeout;
+      cm.on('change', function(instance, changeObj) {
+        // 延迟触发新代码
+        if (timeout) {
+          clearTimeout(timeout);
+        }
+
+        timeout = setTimeout(function() {
+          var seaTempId = (new Date()).getTime();
+          var code = instance.getDoc().getValue();
+          if (instance.getDoc().getMode().name === 'javascript') {
+            code = 'define("./' + seaTempId +'", function(require) {' + code +
+                   '});seajs.use("./' + seaTempId + '")';
+          }
+          var prevInsertCodeElement = item.prev('.nico-insert-code');
+          prevInsertCodeElement.html(code);
+
+          $('.entry-content')
+          .find('>:not(.CodeMirror):not(.spm-doc-textarea)').each(function(i, item) {
+            item = $(item);
+            var cloneNode = item.clone();
+
+            // jquery@1.11 的 replaceWith 不会重新执行代码
+            // 需要手动执行
+            if (item[0].tagName === 'SCRIPT') {
+              eval(cloneNode.html());
+            } else {
+              item.replaceWith(cloneNode);
+              if (item[0] && item[0].cm) {
+                item[0].cm = null;
+              }
+            }
+
+            // 提高下效率，只重新渲染当前修改代码前面的 DOM 元素
+            if (item[0] === prevInsertCodeElement[0]) {
+              return false;
+            }
+          });
+
+          $(instance.getWrapperElement()).removeClass('saved');
+          setTimeout(function() {
+            $(instance.getWrapperElement()).addClass('saved');
+          }, 10);
+        }, 400);
+      });
+      return cm;
+    }
+
+    function enterEditor(toggleButton) {
+      if (!CodeMirror) {
+        return;
+      }
+      $(toggleButton).parent().hide();
+      if (!toggleButton.cm) {
+        toggleButton.cm = CodeMirrorify($(toggleButton).parent().prev('.spm-doc-textarea'));
+      }
+      $(toggleButton).appendTo(toggleButton.cm.getWrapperElement());
+      $(toggleButton.cm.getWrapperElement()).show();
+      $(toggleButton).html('Quit edit');
+      toggleButton.editable = true;
+    }
+
+    function quitEditor(toggleButton) {
+      $(toggleButton).parent().hide();
+      var highlightElem = $(toggleButton.cm.getWrapperElement()).next('.highlight');
+      highlightElem.append(toggleButton).show();
+      $(toggleButton).html('Live edit');
+      toggleButton.editable = false; 
+    }
+
+  });
+  </script>
+  <!-- codemirror.js + javascript.js + css.js + htmlmixed.js -->
+  <script src="http://tfs.alipayobjects.com/images/T1cyxeXjthXXXXXXXX.js"></script>
+</html>

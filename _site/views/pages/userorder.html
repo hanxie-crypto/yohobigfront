@@ -1,0 +1,12 @@
+<div style="background-color:white">
+{{#list}}
+	{{#user}}
+		<p>用户编号：{{id}}</p>
+		<p>用户姓名：{{username}}</p>
+	{{/user}}
+	<p>用户的订单：</p>
+	{{#userorder}}
+		<p>订单编号：{{orderno}}</p>
+	{{/userorder}}
+{{/list}}
+</div>

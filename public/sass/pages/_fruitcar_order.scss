@@ -1,0 +1,116 @@
+.orderoption {
+	background-color: white;
+	padding-top: 10rem / $pxConvertRem !important;
+	padding-bottom: 10rem / $pxConvertRem !important;
+}
+.orderunit ,
+.orderfinal{
+	height: 66rem / $pxConvertRem;
+	line-height: 66rem / $pxConvertRem;
+	.ordermoney {
+		color: #F15A24;
+		font-size: 45rem / $pxConvertRem;
+		line-height: 45rem / $pxConvertRem;
+	}
+	.orderwords {
+		color: #F15A24;
+		font-size: 24rem / $pxConvertRem;
+		line-height: 24rem / $pxConvertRem;
+	}
+}
+.orderdescription {
+	padding-top: 47rem / $pxConvertRem;
+	width: 600rem / $pxConvertRem !important;
+	margin: 0 auto;
+	color: #999;
+	font-size: 24rem / $pxConvertRem;
+	line-height: 24rem / $pxConvertRem;
+	text-align: left;
+}
+.goods4order {
+	display: block;
+	width: 120rem / $pxConvertRem;
+	height: 120rem / $pxConvertRem;
+	margin: 0 auto;
+	border: 1px solid #000;
+}
+.ordersuccess {
+	font-size: 50rem / $pxConvertRem;
+	width: 100%;
+	text-align: center;
+	color: #00CE1E;
+}
+.ordercardetail {
+	background-image: url(../img/card-01.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 90%;
+	height: 325rem / $pxConvertRem;
+	margin: 0 auto;
+	.fruitbrandname {
+		text-align: center;
+	}
+	.fruitaddr{
+			text-align: center;
+			margin-top: 10rem / $pxConvertRem !important;
+	}
+	.fruitbrandnamewrapper {
+		padding-top: 10rem / $pxConvertRem;
+	}
+}
+.ordercomment {
+	.description {
+		width:62%;
+		padding-top: 20rem / $pxConvertRem;
+		margin: 0 auto;
+		overflow: hidden;
+		.tag-status {
+			margin-left: 0 !important;
+		}
+	}
+}
+.ordernamedescription {
+	margin-top: 28rem / $pxConvertRem !important;
+	height: 53rem / $pxConvertRem;
+	line-height: 53rem / $pxConvertRem;
+	border-top: 1rem / $pxConvertRem dotted #ccc;
+	border-bottom: 1rem / $pxConvertRem dotted #ccc;
+}
+.finance {
+	height: 95rem / $pxConvertRem;
+	line-height: 95rem / $pxConvertRem;
+}
+.finacewrapper {
+	text-align: right;
+	img {
+		margin-top: 8rem / $pxConvertRem;
+		width :80rem / $pxConvertRem;
+		height: 80rem / $pxConvertRem;
+	}
+}
+.finacetotal {
+	span {
+		color: #F15A24;
+		font-size: 32rem / $pxConvertRem;
+	}
+}
+.preview {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+	background-color: black;
+	opacity: .7;
+	filter: alpha(opacity=70);
+	p {
+		color: white;
+		margin-top:45%;
+		margin-left: auto;
+	}
+}

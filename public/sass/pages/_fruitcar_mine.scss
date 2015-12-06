@@ -1,0 +1,134 @@
+.mine_header {
+	background-color: white;
+	padding-top: 10rem / $pxConvertRem;
+	padding-bottom: 10rem / $pxConvertRem;
+	margin-bottom: 10rem / $pxConvertRem;
+	.heder_left{
+		text-align: right;
+		.mine_btnleft {
+			height: 80rem / $pxConvertRem;
+			line-height: 80rem / $pxConvertRem;
+			border-top-left-radius: 40rem / $pxConvertRem 40rem / $pxConvertRem;
+			border-top-right-radius: 0;
+			border-bottom-left-radius: 40rem / $pxConvertRem 40rem / $pxConvertRem;
+			border-bottom-right-radius: 0;
+		}
+	}
+	.header_right{
+		text-align: left;
+		.mine_btnright {
+			height: 80rem / $pxConvertRem;
+			line-height: 80rem / $pxConvertRem;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			border-top-right-radius: 40rem / $pxConvertRem 40rem / $pxConvertRem;
+			border-bottom-right-radius: 40rem / $pxConvertRem 40rem / $pxConvertRem;
+		}
+	}
+}
+.myseat {
+	height: 358rem / $pxConvertRem !important;
+}
+.mywrapper {
+	padding-top: 10rem / $pxConvertRem ;
+}
+.myseatconfirm {
+	float: left;
+	width: 80%;
+	height: 80%;
+}
+.myseatfooter {
+	margin-top: 20rem / $pxConvertRem !important;
+	padding-top: 0 ;
+	background-color: white;
+	padding-top: 0rem / $pxConvertRem !important;
+	padding-bottom: 20rem / $pxConvertRem !important;
+	.finacetotal,
+	.finacewrapper{
+		padding-top: 20rem / $pxConvertRem !important;
+	}
+	.finacecontent {
+		height: 100rem / $pxConvertRem;
+		width: 100%;
+		display: block;
+		line-height: 100rem / $pxConvertRem ;
+	}
+}
+.minedetail {
+	background-image: url(../img/card-01.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 90%;
+	height: 308rem / $pxConvertRem;
+	margin: 0 auto 20rem / $pxConvertRem;
+	.fruitbrandname {
+		text-align: center;
+	}
+	.fruitaddr{
+			text-align: center;
+			margin-top: 10rem / $pxConvertRem !important;
+	}
+	.fruitbrandnamewrapper {
+		padding-top: 10rem / $pxConvertRem;
+	}
+	.assignwrapper {
+		padding-top: 10rem / $pxConvertRem;
+		.assignwords {
+			margin: 0 auto;
+			display: block;
+			font-size: 24rem / $pxConvertRem;
+			height: 40rem / $pxConvertRem;
+			line-height: 40rem / $pxConvertRem;
+			width: 120rem / $pxConvertRem;
+			text-align: center;
+			background-color: #00CE1E;
+			color: white;
+			border-radius: 20rem / $pxConvertRem  20rem / $pxConvertRem;
+		}
+	}
+}
+.mine_finance {
+	padding-top: 20rem / $pxConvertRem !important;
+	position: relative;
+	.line {
+		position: absolute;
+		top: 20rem / $pxConvertRem !important;
+		display: block;
+		width: 99%;
+		height: 0;
+		border-bottom: 2px dotted #ccc;
+	}
+	.finacewrapper {
+		text-align: right;
+	}
+	.finacetotal,
+	.finacewrapper{
+		padding-top: 20rem / $pxConvertRem !important;
+	}
+	.finacecontent {
+		height: 100rem / $pxConvertRem;
+		width: 100%;
+		display: block;
+		line-height: 100rem / $pxConvertRem ;
+	}
+	.confirmbtn {
+		margin-right: 20rem / $pxConvertRem ;
+	}
+}
+.feedbackwraper {
+	width: 80%;
+	height: 204rem / $pxConvertRem ;
+	margin: 0 auto;
+	.feedbackcontent {
+		border: none;
+		resize : none;
+		width: 100%;
+		height: 204rem / $pxConvertRem ;
+		padding: 5rem / $pxConvertRem ;
+		border-bottom: 1px solid #ccc;
+	}
+}
+.feedbackext {
+	margin: 0 auto;
+	width: 80%;
+}
