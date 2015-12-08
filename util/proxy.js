@@ -1,5 +1,4 @@
 var superagent = require('superagent');
-var serverbaseurl = 'http://127.0.0.1:8080/yohotest';
 /**
  * post请求
  * @param  {[type]}   url      [description]
@@ -8,7 +7,7 @@ var serverbaseurl = 'http://127.0.0.1:8080/yohotest';
  * @return {[type]}            [description]
  */
 exports.post = function(url,params,callback) {
-	superagent.post(serverbaseurl+url)
+	superagent.post(url)
 		.timeout(10000)
 		//.set('Content-Type', 'application/json')
 		.set('Content-Type','application/x-www-form-urlencoded')
@@ -29,7 +28,7 @@ exports.post = function(url,params,callback) {
  * @return {[type]}            [description]
  */
 exports.get = function(url, params, callback) {
-	var superthis = superagent.get(serverbaseurl+url)
+	var superthis = superagent.get(url)
 		.timeout(10000)
 		.set('Content-Type', 'application/json');
 	if (params) {

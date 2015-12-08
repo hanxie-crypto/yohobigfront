@@ -9,6 +9,7 @@ var proxy = require('../../util/proxy');
 var eventproxy = require('eventproxy');
 var nock = require('nock');
 var superagent = require('superagent');
+var yohoproxy = require('../../yohoproxy');
 // 首页 bigpipe实现
 exports.index = function(req, res, next) {
 	console.time('bigpipe&协同数据测试');
@@ -31,7 +32,7 @@ exports.index = function(req, res, next) {
 	});
 	//获取用户
 	proxy.get('/user', null, function(err, responsedata) {
-		console.log(responsedata,'用户数据');
+		console.log(responsedata, '用户数据');
 		if (err) ep.throw(err);
 		res.render('partials/user', {
 			user: responsedata.data
@@ -47,7 +48,7 @@ exports.index = function(req, res, next) {
 	//获取订单
 	proxy.get('/orderlist', null, function(err, responsedata) {
 		if (err) ep.throw(err);
-		console.log(responsedata,'订单数据');
+		console.log(responsedata, '订单数据');
 		res.render('partials/order', {
 			order: responsedata.data
 		}, function(err, str2) {
@@ -101,6 +102,18 @@ exports.orders = function(req, res, next) {
 					});
 				})
 				**/
+		}
+	})
+}
+
+exports.textproxy = function(req, res, next) {
+	yohoproxy.done('user', {
+		id: 2
+	}, function(err, rspdata) {
+		if (err) {
+			next(err);
+		} else {
+			res.send(rspdata);
 		}
 	})
 }

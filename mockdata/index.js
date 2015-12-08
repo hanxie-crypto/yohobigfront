@@ -1,0 +1,33 @@
+var fs = require('fs');
+var path = require('path').resolve(__dirname, './');
+var fileList = [];
+var mockdataname = [];
+var mockdatamap = {}
+
+function readFile(path) {
+    var dirList = fs.readdirSync(path);
+    dirList.forEach(function(item) {
+        if (fs.statSync(path + '/' + item).isDirectory()) {
+            return;
+        } else {
+            if (item.indexOf('.json') !== -1) {
+                fileList.push(path + '/' + item);
+                mockdataname.push(item.replace('.json', ''));
+            }
+        }
+    });
+}
+
+function exeMockData() {
+    fileList.forEach(function(path, index) {
+        mockdatamap[mockdataname[index]] = JSON.parse(fs.readFileSync(path, {
+            encoding: 'utf8'
+        }));
+    })
+
+}
+
+readFile(path);
+exeMockData();
+
+module.exports = mockdatamap;
