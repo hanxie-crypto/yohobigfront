@@ -1,7 +1,7 @@
 {
-  "name": "fruitmobile",
+  "name": "yohobigfront",
   "version": "1.0.0",
-  "description": "fruitmobile ",
+  "description": "yohobigfront ",
   "main": "app.js",
   "scripts": {
     "test": "spm test",
