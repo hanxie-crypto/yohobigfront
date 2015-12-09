@@ -1,0 +1,31 @@
+{{# tplrecommend}}
+{{> index/floor_header}}
+<div class="tpl-recommend clearfix">
+    <div class="tpl-body clearfix">
+        <div class="tpl-nav">
+            <div class="tpl-keywords">
+                {{#each keyword}}
+                <a class="keywords{{@index}}" title="{{name}}" href="{{href}}"><img class="lazy" data-original="{{img}}"/></a>
+                {{/ keyword}}
+            </div>
+            <div class="tpl-category clearfix">
+                {{#each category}}
+                <a href="{{href}}">{{name}}</a>
+                {{/ category}}
+            </div>
+        </div>
+        <div class="tpl-brands clearfix">
+            {{#each brands}}
+            <a title="{{name}}" href="{{href}}"><img class="lazy" data-original="{{img}}"/></a>
+            {{/each}}
+        </div>
+        <div class="tpl-types clearfix">
+            <ul>
+                {{#each types}}
+                <li><a title="{{name}}" href="{{href}}"><img class="lazy" data-original="{{img}}"/></a></li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+{{/ tplrecommend}}

@@ -33,8 +33,13 @@ yohoproxy.init({mock:true});//初始化代理
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
 app.engine('html', require('hbs').__express);
-hbs.registerHelper("test", hbshelper['test']); //测试helper
+
+for(var hbname in hbshelper){  //handlerbar helper用法
+  hbs.registerHelper(hbname, hbshelper[hbname]); 
+}
+
 hbs.registerPartials(__dirname + '/views/partials');
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 var accessLogStream = fs.createWriteStream(__dirname + '/access.log', {
@@ -67,7 +72,8 @@ app.use(busboy({
     fileSize: 10 * 1024 * 1024 // 10MB
   }
 }));
-app.use("/", web_routers);
+
+app.use("/", web_routers); //路由
 
 
 // catch 404 and forward to error handler

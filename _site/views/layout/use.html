@@ -1,0 +1,15 @@
+<script>
+    seajs.use('js/header');
+    seajs.use('js/footer');
+</script>
+{{!-- 首页 --}}
+{{#if boysHomePage}}
+    <script>
+        seajs.use('js/home/home');
+    </script>
+{{/if}}
+
+{{!-- 搜索 --}}
+{{#if searchListPage}}
+<script>seajs.use('js/product/list');</script>
+{{/if}}

@@ -3,8 +3,7 @@
  * @author: liuyue(yue.liu@yoho.cn)
  * @date: 2015/7/13
  */
-var data = require('../../public/js/data/index'),
-	layoutPath = '../layouts/layout';
+var layoutPath = '../layouts/layout';
 var proxy = require('../../util/proxy');
 var eventproxy = require('eventproxy');
 var nock = require('nock');
@@ -16,7 +15,9 @@ exports.index = function(req, res, next) {
 	res.setHeader('content-type', 'text/html; charset=utf-8');
 	res.render('pages/index', {
 		title: '首页',
-		layout: layoutPath
+		headerdata: {},
+		layout: layoutPath,
+
 	}, function(err, str) {
 		if (err) {
 			next(err);
@@ -31,14 +32,15 @@ exports.index = function(req, res, next) {
 		next(err);
 	});
 	//获取用户
-	proxy.get('/user', null, function(err, responsedata) {
+	yohoproxy.done('user', null, function(err, responsedata) {
 		console.log(responsedata, '用户数据');
 		if (err) ep.throw(err);
 		res.render('partials/user', {
-			user: responsedata.data
+			user: responsedata.data.userlist
 		}, function(err, str1) {
 			if (err) ep.throw(err);
 			var temp = encodeURIComponent(str1);
+			console.log(str1)
 			var final1 = '<script>if(!$("#loading").hasClass("hide")){$("#loading").addClass("hide")};$("#user_partial").html(decodeURIComponent("' + temp + '"))</script>';
 			res.write(final1);
 			console.timeEnd('bigpipe&协同数据测试');
@@ -46,11 +48,11 @@ exports.index = function(req, res, next) {
 		});
 	});
 	//获取订单
-	proxy.get('/orderlist', null, function(err, responsedata) {
+	yohoproxy.done('orderlist', null, function(err, responsedata) {
 		if (err) ep.throw(err);
 		console.log(responsedata, '订单数据');
 		res.render('partials/order', {
-			order: responsedata.data
+			orderlist: responsedata.data.orderlist
 		}, function(err, str2) {
 			if (err) ep.throw(err);
 			var temp = encodeURIComponent(str2);
@@ -64,7 +66,7 @@ exports.index = function(req, res, next) {
 exports.orders = function(req, res, next) {
 	console.time('混合查询测试');
 	var ep = eventproxy.create();
-	proxy.get('/user', null, ep.doneLater('findorder')); //查询所有的用户
+	yohoproxy.done('user', null, ep.doneLater('findorder')); //查询所有的用户
 	ep.once('findorder', function(responsedata) { //根据用户查询该用户的订单
 		if (responsedata) {
 			var users = responsedata.data;
@@ -116,4 +118,39 @@ exports.textproxy = function(req, res, next) {
 			res.send(rspdata);
 		}
 	})
+}
+
+exports.boys = function(req, res, next) {
+	var ep = eventproxy.create();
+	yohoproxy.done('headernav', null, ep.doneLater('headernav'));
+	yohoproxy.done('gobuy', null, ep.doneLater('gobuy'));
+	yohoproxy.done('slidepage', null, ep.doneLater('slidepage'));
+	yohoproxy.done('adbanner', null, ep.doneLater('adbanner'));
+	yohoproxy.done('newarrivls', null, ep.doneLater('newarrivls'));
+	yohoproxy.done('newreport', null, ep.doneLater('newreport'));
+	yohoproxy.done('preferencebrands', null, ep.doneLater('preferencebrands'));
+	yohoproxy.done('recommend', null, ep.doneLater('recommend'));
+	yohoproxy.done('singlehot', null, ep.doneLater('singlehot'));
+	ep.all('headernav', 'gobuy', 'slidepage', 'adbanner', 'newreport', 'newarrivls', 'preferencebrands',
+		'recommend', 'singlehot',
+		function(headernav, gobuy, slidepage, adbanner, newreport, newarrivls, preferencebrands, recommend, singlehot) {
+			var headerdata = {};
+			var boys = {};
+			headerdata.navbars = headernav.data.navbars;
+			headerdata.gobuy = gobuy.data.gobuy;
+			boys.slide = slidepage.data;
+			boys.newReport = newreport.data,
+			boys.preferenceBrands = preferencebrands.data;
+			boys.singlehot = singlehot.data;
+			boys.adbanner = adbanner.data;
+			boys.recommend = recommend.data;
+			boys.newArrivls = newarrivls.data;
+			res.render('pages/boy', {
+				title: '男首',
+				headerdata: headerdata,
+				boys: boys,
+				layout: layoutPath
+			});
+
+		});
 }

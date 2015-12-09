@@ -1,0 +1,12 @@
+<div class="floor-header clearfix">
+    <h2 class="floor-title">{{name}}</h2>
+    {{#if navs}}
+    <ul class="header-navs">
+        {{# navs}}
+        <li data-classify="{{id}}">
+            <a target="_blank" href="{{href}}">{{name}}</a>
+        </li>
+        {{/ navs}}
+    </ul>
+    {{/if}}
+</div>

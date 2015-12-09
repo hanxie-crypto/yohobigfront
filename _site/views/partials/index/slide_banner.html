@@ -1,0 +1,34 @@
+<div class="slide-container">
+    <div class="slide-wrapper"> 
+        <ul>
+            {{# list}}
+            <li>
+                <a href="{{href}}">
+                    <img class="lazy" data-original="{{img}}" alt="">
+                </a>
+            </li>
+            {{/ list}}  
+        </ul>
+        <div class="slide-switch">
+            <a class="prev" href="javascript:;">
+                <span class="iconfont">&#xe60c;</span>
+            </a>
+            <a class="next" href="javascript:;">
+                <span class="iconfont">&#xe60b;</span>
+            </a>
+        </div>
+    </div>
+
+    {{#if pagination}}
+    <div class="thumb-pagination">
+        <ul class="clearfix">
+            {{# pagination}}
+            <li>
+                <a href="{{href}}"></a>
+                <img src="{{img}}" alt="">  
+            </li>
+            {{/ pagination}}
+        </ul>
+    </div>
+    {{/if}}
+</div>

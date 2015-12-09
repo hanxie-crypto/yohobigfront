@@ -5,7 +5,7 @@ var controllerPath = '../../controllers/web/',
 router.get('/', main.index); 
 router.get('/orders', main.orders); 
 router.get('/textproxy',main.textproxy);
-
+router.get('/boys',main.boys);
 
 
 

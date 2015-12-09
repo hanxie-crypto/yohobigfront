@@ -19,6 +19,14 @@ var config = {
 	redis_host: '115.28.8.74',
 	redis_port: 6379,
 	session_secret: 'yohodd', 
-	auth_cookie_name: 'yohodd'
+	auth_cookie_name: 'yohodd',
+	agentconfig: { //代理配置
+		timeout: 10000,
+		contenttype: 'application/json'
+	},
+	mockconfig: {
+		timeout: 2000,
+		contenttype: 'application/json'
+	}
 }
 module.exports = config;

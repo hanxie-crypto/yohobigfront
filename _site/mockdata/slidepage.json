@@ -1,0 +1,16 @@
+{
+    "list": [{
+        "href": "/?gender=1,3",
+        "img": "http://img10.static.yhbimg.com/taobaocms/2015/11/26/12/01c3b99f554ad50d9e5a9900719715c94c.jpg"
+    }, {
+        "href": "/?gender=1,3",
+        "img": "http://img10.static.yhbimg.com/taobaocms/2015/11/26/12/01c3b99f554ad50d9e5a9900719715c94c.jpg"
+    }],
+    "pagination": [{
+        "href": "http://sale.yohobuy.com/?specialsale_id=13&gender=1,3",
+        "img": "http://img13.static.yhbimg.com/taobaocms/2015/11/26/12/024a810cfa89d67569c6c3bacedba8869a.jpg?imageMogr2/thumbnail/138x54/extent/138x54/background/d2hpdGU=/position/center/quality/90"
+    }, {
+        "href": "http://sale.yohobuy.com/?specialsale_id=13&gender=1,3",
+        "img": "http://img13.static.yhbimg.com/taobaocms/2015/11/26/12/024a810cfa89d67569c6c3bacedba8869a.jpg?imageMogr2/thumbnail/138x54/extent/138x54/background/d2hpdGU=/position/center/quality/90"
+    }]
+}

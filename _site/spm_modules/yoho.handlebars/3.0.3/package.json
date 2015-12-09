@@ -1,0 +1,32 @@
+{
+  "name": "yoho.handlebars",
+  "version": "3.0.3",
+  "description": "handlebars",
+  "keywords": [],
+  "homepage": "",
+  "author": "xuqi <xuqi9010@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "licenses": "MIT",
+  "spm": {
+    "main": "handlebars.js",
+    "dependencies": {
+      "source-map": "1.0.2"
+    },
+    "devDependencies": {
+      "expect.js": "0.3.1"
+    }
+  },
+  "devDependencies": {
+    "spm": "3"
+  },
+  "scripts": {
+    "test": "spm test",
+    "build": "spm build"
+  }
+}

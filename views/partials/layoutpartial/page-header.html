@@ -1,0 +1,298 @@
+{{#headerdata}}
+<div class="yoho-header">
+    <div class="header-topwrapper clearfix">
+        <div class="header-top">
+            <div class="leftpart float-left">
+                <span class="icon-hamburger"></span>
+                <a href="" class="header-yoho" >YOHO!有货</a>
+                <ul class="yohoproducts-list">
+                    <li class="yohoproducts-item">
+                        <a href="" class="yohogroup" en="YOHO!" cn="集团官网">YOHO!</a>
+                    </li>
+                    <li class="yohoproducts-item">
+                        <a href="" class="yohogroup" en="YOHO!BOYS" cn="男生潮流">YOHO!BOYS</a>
+                    </li>
+                    <li class="yohoproducts-item">
+                        <a href="" class="yohogroup" en="YOHO!GIRLS" cn="女生潮流">YOHO!GIRLS</a>
+                    </li>
+                    <li class="yohoproducts-item">
+                        <a href="" class="yohogroup" en="YOHO!SHOW" cn="物趣分享">YOHO!SHOW</a>
+                    </li>
+                    <li class="yohoproducts-item">
+                        <a href="" class="yohogroup" en="YO'HOOD" cn="潮流嘉年华">YO'HOOD</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="rightpart">
+                <div id="loginBox" class="float-left">
+                    <span class="hi">Hi~</span>
+                    <a href="" class="loginbar">[请登录]</a>
+                    <a href="" class="registbar">[免费注册]</a>
+                </div>
+                <div class="tag-list-wrapper">
+                    <ul class="tag-list">
+                        <li class="tag-item myyoho" id="myYohoBox">
+                            <span class="tag-seprate"></span>
+                            <a href="">MY有货</a>
+                            <span class="icon-bottomarrow"></span>
+                            <div class="myyoho-info"></div>
+                        </li>
+                        <li class="tag-item myorder">
+                            <span class="tag-seprate"></span>
+                            <span class="icon-papers"></span>
+                            <a href="">我的订单</a>
+                        </li>
+                        <li class="tag-item mycollect">
+                            <span class="tag-seprate"></span>
+                            <span class="icon-heart"></span>
+                            <a href="">我的收藏</a>
+                        </li>
+                        <li class="tag-item message">
+                            <span class="tag-seprate"></span>
+                            <span class="icon-mail"></span>
+                            <a href="">消息</a>
+                        </li>
+                        <li class="tag-item phone">
+                            <span class="tag-seprate"></span>
+                            <span class="icon-iphone"></span>
+                            <a href="">手机版</a>
+                            <div class="qr">
+                                <div class="qr-img"></div>
+                                <h3 class="qr-words">扫描二维码</h3>
+                                <h3 class="qr-words">下载有货手机客户端</h3>
+                                <h3 class="qr-more">更多客户端下载</h3>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-navwrapper clearfix">
+        <div class="header-navcontent">
+            <ul class="first-nav-list float-left">
+                {{# navbars}}
+                <li class="first-nav-item {{classname}}">
+                    <h3 class="name-cn">
+                        <a href="{{link}}">{{name_cn}}</a>
+                    </h3>
+                    <h3 class="name-en">
+                        <a href="{{link}}">{{name_en}}</a>
+                    </h3>
+                    <div class='sub-nav-wrapper'>
+                        <ul class="sub-nav-list">
+                            {{# subnav}}
+                            <li class="sub-nav-item">
+                                <a  href="{{link}}">{{name}}</a>
+                                <div class="third-nav-wrapper">
+                                    <div class="third-nav">
+                                        <div class="categorywrapper" id="category{{../index_main}}{{index_sub}}">
+                                            <div class="category">
+                                                {{# thirdnav}}
+                                                <div class="thirdnavlist">
+                                                    <h1 class="category-title thirdnavbar">{{title}}</h1>
+                                                    <ul class="category-list">
+                                                        {{#branditems}}
+                                                        <li class="category-item thirdnavbar">
+                                                            <a href="" hot={{hot}}>{{brandname}}</a>
+                                                        </li>
+                                                        {{/branditems}}
+                                                    </ul>
+                                                </div>
+                                                {{/thirdnav}}
+                                            </div>
+                                        </div>
+                                        <div class="showdetail" data-code="220eec926e0d2c48b2f7e36fb9c42b83">
+                                            <a href="http://list.yohobuy.com/?gender=1,3&amp;msort=8">
+                                                <img src="http://img12.static.yhbimg.com/yhb-img01/2015/10/30/06/02af834d146e3f00b1f5fcc8388f641922.jpg?imageView/1/w/337/h/250" alt="" style=""></a>
+                                            <a class="title" href="http://list.yohobuy.com/?gender=1,3&amp;msort=8">热门小物优选</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            {{/ subnav}}
+                        </ul>
+                    </div>
+                </li>
+                {{/ navbars}}
+            </ul>
+            <div class="icon-logo"></div>
+            <div class="header-tool float-right">
+                <div class="search float-left {{searchcate}}" >
+                    <form action="http://search.yohobuy.com" method="get" id="searchForm">
+                        <span class="searchspan">
+                            <input class="searchinput" type="text" name="keyword" id="query_key" autocomplete="off" x-webkit-speech="" lang="zh-CN" x-webkit-grammar="builtin:translate" value="" onfocus="if(this.value==this.defaultValue){this.value='';this.style.color='#333'}" onblur="if(this.value==''){this.value=this.defaultValue;this.style.color='#999'}" maxlength="30"></span>
+                        <a class="icon-search" href="javascript:submitSearch();"></a>
+                        <ul class="search-list"></ul>
+                    </form>
+                </div>
+                <div class="gobuy float-left {{gobytype}}" id="miniCartBox">
+                    {{# gobuy}}
+                    <span class="ic-infomation">{{gobuynum}}</span>
+                    <div class="gobuy-wrapper"></div>
+                    {{/gobuy}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/headerdata}}
+<div id="goodcartempwarpper">
+    <script type="text/html" id="mini-cart-tpl">
+    \{\{#carData\}\}
+    <div class="gobuy-notempty">
+      <div class="goods-list-wrapper">
+        <ul class="goods-list">
+            \{\{#main_goods\}\}
+            <li class="goods-item">
+                <a href="\{\{product_url\}\}">
+                    <img src="\{\{default_img\}\}" alt="" class="goods-img" />
+                </a>
+                <div class="goods-detail float-left">
+                    <h3 class="content"><a href="\{\{product_url\}\}">\{\{product_name\}\}</a></h3>
+                    <h3 class="style">
+                        颜色：
+                        <span class="color">\{\{color_name\}\}</span>
+                        尺码：
+                        <span class="size">\{\{size_name\}\}</span>
+                    </h3>
+                </div>
+                <div class="goods-price float-left">
+                    <h3 class="priceandnum">
+                        <span class="price">\{\{show_price\}\}</span>
+                        x
+                        <span class="num">\{\{buy_number\}\}</span>
+                    </h3>
+                    <a href="javascript:void(0)" class="delete goodscardelete" goodsid=\{\{goods_incart_id\}\} cheapest=\{\{is_cheapest_free\}\}>删除</a>
+                </div>
+            </li>
+            \{\{/main_goods\}\}
+            \{\{#advance_goods\}\}
+            <li class="goods-item">
+                <a href="\{\{product_url\}\}">
+                    <img src="\{\{default_img\}\}" alt="" class="goods-img"></a>
+                <div class="goods-detail float-left">
+                    <h3 class="content"><a href="\{\{product_url\}\}">\{\{product_name\}\}</a></h3>
+                    <h3 class="style">
+                        颜色：
+                        <span class="color">\{\{color_name\}\}</span>
+                        尺码：
+                        <span class="size">\{\{size_name\}\}</span>
+                    </h3>
+                </div>
+                <div class="goods-price float-left">
+                    <h3 class="priceandnum">
+                        ￥
+                        <span class="price">\{\{show_price\}\}</span>
+                        x
+                        <span class="num">\{\{buy_number\}\}</span>
+                    </h3>
+                    <a href="javascript:void(0)" class="delete goodscardelete" goodsid=\{\{goods_incart_id\}\} cheapest=\{\{is_cheapest_free\}\}>删除</a>
+                </div>
+            </li>
+            \{\{/advance_goods\}\}
+            \{\{# outlet_goods\}\}
+            <li class="goods-item">
+                <a href="\{\{product_url\}\}">
+                    <img src="\{\{default_img\}\}" alt="" class="goods-img"></a>
+                <div class="goods-detail float-left">
+                    <h3 class="content"><a href="\{\{product_url\}\}">\{\{product_name\}\}</a></h3>
+                    <h3 class="style">
+                        颜色：
+                        <span class="color">\{\{color_name\}\}</span>
+                        尺码：
+                        <span class="size">\{\{size_name\}\}</span>
+                    </h3>
+                </div>
+                <div class="goods-price float-left">
+                    <h3 class="priceandnum">
+                        ￥
+                        <span class="price">\{\{show_price\}\}</span>
+                        x
+                        <span class="num">\{\{buy_number\}\}</span>
+                    </h3>
+                    <a href="javascript:void(0)" class="delete goodscardelete" goodsid=\{\{goods_incart_id\}\} cheapest=\{\{is_cheapest_free\}\}>删除</a>
+                </div>
+            </li>
+            \{\{/outlet_goods\}\}
+            \{\{#gift_goods\}\}
+            <li class="goods-item">
+                <a href="\{\{product_url\}\}">
+                    <img src="\{\{default_img\}\}" alt="" class="goods-img"></a>
+                <div class="goods-detail float-left">
+                    <h3 class="content"><a href="\{\{product_url\}\}">\{\{product_name\}\}</a></h3>
+                    <h3 class="style">
+                        颜色：
+                        <span class="color">\{\{color_name\}\}</span>
+                        尺码：
+                        <span class="size">\{\{size_name\}\}</span>
+                    </h3>
+                </div>
+                <div class="goods-price float-left">
+                    <h3 class="priceandnum">
+                        ￥
+                        <span class="price">\{\{show_price\}\}</span>
+                        x
+                        <span class="num">\{\{buy_number\}\}</span>
+                    </h3>
+                    <a href="javascript:void(0)" class="delete goodscardelete" goodsid=\{\{goods_incart_id\}\} cheapest=\{\{is_cheapest_free\}\}>删除</a>
+                </div>
+            </li>
+            \{\{/gift_goods\}\}
+            \{\{#need_pay_gifts\}\}
+            <li class="goods-item">
+                <a href="\{\{product_url\}\}">
+                    <img src="\{\{default_img\}\}" alt="" class="goods-img"></a>
+                <div class="goods-detail float-left">
+                    <h3 class="content"><a href="\{\{product_url\}\}">\{\{product_name\}\}</a></h3>
+                    <h3 class="style">
+                        颜色：
+                        <span class="color">\{\{color_name\}\}</span>
+                        尺码：
+                        <span class="size">\{\{size_name\}\}</span>
+                    </h3>
+                </div>
+                <div class="goods-price float-left">
+                    <h3 class="priceandnum">
+                        ￥
+                        <span class="price">\{\{show_price\}\}</span>
+                        x
+                        <span class="num">\{\{buy_number\}\}</span>
+                    </h3>
+                    <a href="javascript:void(0)" class="delete goodscardelete" goodsid=\{\{goods_incart_id\}\} cheapest=\{\{is_cheapest_free\}\}>删除</a>
+                </div>
+            </li>
+            \{\{/need_pay_gifts\}\}
+        </ul>
+        <ul class="activity-list">
+            \{\{#equalone has_promotion\}\}
+            <li class="activity-item">
+                <span class="activity-name">活动</span>
+                <h3 class="activity-content">
+                    \{\{fit_outlet_promotion \}\}购outlet商品，满￥1999再享9折\}\}
+                    \{\{#equalone has_other_promotion\}\}
+                        <span class="mycart_i_down" title="更多" ></span>
+                    \{\{/equalone\}\}
+                    \{\{#equalone has_first_promotion\}\}
+                        \{\{first_promotions.promotion_title\}\}
+                    \{\{/equalone\}\}
+                </h3>
+            </li>
+            \{\{/equalone\}\}
+            \{\{#equalone fit_free_shipping \}\}
+            <li  class="activity-item">
+                <span class="activity-name">免运费</span>
+                <h3 class="activity-content">全场满 ￥499免运费</h3>
+            </li>
+            \{\{/equalone\}\}
+        </ul>
+    </div>
+    <div class="gobuy-notempty-footer">
+        <h3>
+            <a href="<?php print QConfigs_Site_Config::$site_url;?>/shopping/cart">去购物车结算</a>
+        </h3>
+    </div>
+    \{\{/carData\}\}
+    </script>
+
+</div>

@@ -1,0 +1,837 @@
+
+/*男首1150 女首/儿童/创意生活990*/
+.home-page {
+	width: 990px;
+	margin: 10px auto 0;
+    overflow: hidden;
+    /*大banner*/
+	.slide-container {
+        position: relative;
+		img {
+			display: block;
+		}
+	}
+    
+    /*大banner大图*/
+	.slide-wrapper {
+		position: relative;
+		height: 450px;
+		overflow: hidden;
+
+		ul {
+			position: relative;
+			height: 100%;
+		}
+
+		&:hover {
+			.slide-switch.show {
+                display: block;
+			}
+		}
+
+		li {
+			display: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+
+			&:first-child {
+				display: block;
+			}
+		}
+	}
+    
+    /*大图上的左右切换按钮*/
+    .slide-switch {
+        display: none;
+        /* @include opacity(0);
+        @include transition-property(opacity);
+        @include transition-duration(.2s);
+        @include transition-timing-function(ease-in); */
+        a {
+            position: absolute;
+            top: 50%;
+            margin: -30px 0 0;
+            width: 60px;
+            height: 60px;
+            line-height: 56px;
+            text-align: center;
+            z-index: 2;
+            background: #fff;
+            @include opacity(0.55);
+
+            &.prev {
+                left: 0;
+            }
+
+            &.next {
+                right: 0;
+            }
+
+            &:hover{
+                @include opacity(0.9);
+            }
+            
+            .iconfont {
+                font-size: 32px;
+                color: #59585a;
+            }
+        }
+    }
+    
+    /*大banner缩略图*/
+	.thumb-pagination {
+		margin: 6px 0 0;
+		padding: 0 0 0 2px;
+
+		li {
+			position: relative;
+			float: left;
+			margin: 0 0 0 6px;
+			width: 138px;
+			height: 54px;
+
+			&:first-child {
+				margin: 0;
+			}
+
+			&.focus {
+				a {
+					@include opacity(0);
+				}
+			}
+
+			a {
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				background: #000;
+				@include opacity(0.3);
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+    
+    /*大banner圆点*/
+    .slide-pagination {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 12px;
+        text-align: center;
+        font-size: 0;
+        .slide-pagination-inner {
+            position: relative;
+            padding: 7px;
+            @include inline-block;
+        }
+        .slide-shade {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: #000;
+            @include opacity(0.3);
+            @include border-radius(13px);
+        }
+        span {
+            position: relative;
+            @include inline-block;
+            margin: 0 7px;
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            cursor: pointer;
+            @include opacity(0.6);
+            @include border-radius(6px);
+            z-index: 2;
+
+            &.focus {
+                @include opacity(1);
+            }
+        }
+    }
+
+    /*女首碎片banner*/
+    .debris-slider {
+        height: 440px;
+        width: 100%;
+
+        .col {
+            float: left;
+
+            a {
+                display: block;
+            }
+        }
+
+        .left-col a,
+        .right-col a {
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .right-col img,
+        .left-col img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .left-col {
+            margin-right: 9px;
+
+            a {
+                width: 240px;
+                height: 103px;
+            }
+
+            a:first-child {
+                height: 214px;
+            }
+        }
+
+        .center-col {
+            position: relative;
+            width: 492px;
+            height: 100%;
+            margin-right: 9px;
+            font-size: 0;
+
+            &:hover {
+                .slide-switch.show {
+                    display: block;
+                }
+            }
+        
+            .slide-wrapper {
+                height: 100%;
+            }
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        .right-col a {
+            width: 240px;
+            height: 103px;
+        }
+
+        .right-col a:first-child {
+            height: 326px;
+            margin-bottom: 11px;
+        }
+    }
+    
+    /*男首最新速报*/
+	.new-report {
+		img {
+			display: block;
+            width: 100%;
+            height: 100%;
+		}
+		.report-list {
+			float: left;
+			width: 868px;
+			li {
+				float: left;
+				margin: 0 8px 8px 0;
+				width: 185px;
+				height: 248px;
+				overflow: hidden;
+				&:first-child {
+					margin-right: 7px;
+					width: 282px;
+					height: 504px;
+				}
+
+			}
+		}
+		
+		.last-item {
+			float: left;
+			width: 282px;
+			height: 504px;
+			overflow: hidden;
+		}
+	}
+    
+    /*优选品牌*/
+    .preference-brand {
+        overflow: hidden;
+    }
+
+    .preference-brand-list {
+        margin-top: 8px;
+        width: 998px;
+    }
+
+    .preference-brand-item {
+        float: left;
+        margin-right: 7px;
+        margin-bottom: 8px;
+
+        a {
+            display: table-cell;
+            width: 159px;
+            height: 74px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    .preference-more {
+        float: left;
+        width: 159px;
+        height: 74px;
+        line-height: 90px;
+        text-align: center;
+        color: black;
+        font-size: 16px;
+    }
+
+    .img-slider-wrapper {
+        position: relative;
+        width: 100%;
+        height: 480px;
+        background: #8ae6e0;
+
+        .img-brand-switch {
+            display: block;
+            a {
+                position: absolute;
+                top: 50%;
+                font-size: 36px;
+                color: #fff;
+
+                &.next {
+                    right: 30px;
+                }
+
+                &.prev {
+                    left: 30px;
+                }
+            }
+        }
+    }
+
+    .img-container-landscape {
+        margin: 73px auto 0;
+        box-sizing: border-box;
+        width: 844px;
+        height: 370px;
+        overflow: hidden;
+
+        .img-list {
+            width: 1000px;
+            height: 100%;
+        }
+
+        .img-item {
+            float: left;
+            box-sizing: border-box;
+            width: 275px;
+            height: 100%;
+            margin-right: 9px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    
+    /*男首优选品牌 图片品牌*/
+	.img-brand {
+		position: relative;
+		width: 100%;
+		height: 175px;
+		overflow: hidden;
+
+		&:hover {
+			.img-brand-switch {
+				display: block;
+			}
+		}
+		ul {
+			width: 1158px;
+		}
+		li {
+			float: left;
+			margin: 0 8px 0 0;
+			width: 378px;
+			height: 175px;
+			line-height: 175px;
+			overflow: hidden;
+			font-size: 0;
+			text-align: center; 
+
+			img {
+				max-width: 100%;
+				max-height: 100%;
+				vertical-align: middle;
+			}
+		}
+
+        /*图片品牌左右切换按钮*/
+        .img-brand-switch {
+            display: none;
+            a {
+                position: absolute;
+                top: 50%;
+                margin: -20px 0 0;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                z-index: 2;
+                background: #fff;
+                @include opacity(0.55);
+
+                &.prev {
+                    left: 0;
+                }
+                &.next {
+                    right: 0;
+                }
+                &:hover {
+                    @include opacity(0.9);
+
+                }
+            }
+        }
+	}
+    
+    
+
+    /*男首优选品牌 logo品牌*/
+	.logo-brand {
+        width: 100%;
+        height: 282px;
+        overflow: hidden;
+
+        &.logos-10 {
+            height: 188px;
+        }
+
+		ul {
+			width: 1158px;
+		}
+		li {
+			float: left;
+			margin: 8px 8px 0 0;
+			width: 185px;
+			height: 86px;
+			line-height: 86px;
+			font-size: 0;
+			text-align: center;
+			img {
+				max-width: 100%;
+				max-height: 100%;
+				vertical-align: middle;
+			}
+		}
+		.logo-brand-switch {
+			position: relative;
+			background: image-url('index/logo-brand-line.png') no-repeat center center;
+			line-height: normal;
+			.iconfont {
+				position: absolute;
+				left: 50%;
+				font-size: 32px;
+
+				&.prev {
+					top: 10px;
+					
+					margin: 0 0 0 -48px;
+				}
+				&.next {
+					bottom: 12px;
+					margin: 0 0 0 20px;
+				}
+			}
+		}
+		.brand-more {
+			font-size: 16px;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+    
+    /*创意生活商品分类*/
+    .categorys-list {
+        ul {
+            width: 1004px;
+        }
+        li {
+            float: left;
+            margin: 0 7px 7px 0;
+            width: 161px;
+            height: 214px;
+
+            &.cate-item0 {
+                width: 160px;
+                height: 435px;
+            }
+            &.cate-item1 {
+                width: 326px;
+                height: 435px;
+            }
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+	.tpl-recommend{
+        width: 1150px;
+        overflow: hidden;
+        a{
+            display: block;
+            background-color: #f8f8f8;
+            img{display: block;width: 100%;}
+        }
+        .tpl-nav{
+            float: left;
+            width: 185px;
+            height: 512px;
+            overflow: hidden;
+            .tpl-keywords{
+                margin-bottom: 8px;
+            }
+            .tpl-category{
+            	height: 228px;
+                padding: 10px 0;
+                background-color: #f8f8f8;
+                overflow: hidden;
+                a{
+                    float: left;
+                    width: 50%;
+                    height: 38px;
+                    line-height: 38px;
+                    text-align: center;
+                    color: #000;
+                    font-size: 14px;
+                    overflow: hidden;
+                }
+            }
+        }
+        .tpl-brands{
+            float: left;
+            margin-left: 8px;
+            width: 378px;
+            height: 512px;
+            overflow: hidden;
+            li{
+                margin-bottom: 8px;
+                img{
+                        height: 248px;
+                        width: 100%;
+                    }
+            }
+            
+        }
+        .tpl-types{
+            float: left;
+            width: 579px;
+            height: 512px;
+            overflow: hidden;
+            li{
+                float: left;
+                margin-left: 8px;
+                margin-bottom: 8px;
+                img{
+                        width: 185px;
+                        height:248px;
+                    }
+            }
+        }
+        .tpl-products{
+
+            height: 298px;
+            overflow: hidden;
+            margin-left:-10px; 
+            li{
+                float: left;
+                margin-left:10px; 
+                img{
+                    width: 222px;
+                    height: 298px;
+                }
+            }
+        }
+    }
+
+    .commodity{
+        position: relative;
+        width: 1160px;
+        margin-bottom:80px; 
+        .commodity-list{
+            margin-left: -10px;
+            li{
+                float: left;
+                margin-left: 10px;
+                a{
+                    display: block;
+                    height: 408px;
+                    width: 222px;
+                }
+                .commodity-img{
+                    position: relative;
+                    img{
+                        display: block;
+                        height: 298px;
+                        width: 222px;
+                    }
+                }
+                p.commodity-name{
+                    font-size: 12px;
+                    color: #000;
+                    text-align: center;
+                    margin-top: 14px;
+                    line-height: 18px;
+                }
+                p.commodity-price{
+                    position: relative;
+                    margin: 3px 0 0 0;
+                    text-align: center;
+                    line-height: 20px;
+                    color: #000;
+                    span{
+                        display: inline-block;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .commodity-brands{
+            a{
+                float: left;
+                margin-left: 8px;
+                width: 185px;
+                height: 86px;
+                display: block;
+                img{
+                    display: block;
+                    width: 185px;
+                    height: 86px;
+                }
+            }
+        }
+        .loading{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+    .singlehot{
+        width: 1150px;
+        height: 584px;
+        overflow: hidden;
+        ul{
+            margin-left:-8px; 
+        }
+        li{
+            float: left;
+            margin-left:8px; 
+            margin-bottom:8px; 
+        }
+        a{
+            display: block;
+            background-color: #f8f8f8;
+            img{
+                display: block;
+                width: 185px;
+                height: 284px;
+            }
+        }
+        .impo1 img,.impo9 img{
+            width: 378px;
+        }
+    }
+    .adbanner{
+        width: 100%;
+        height: 150px;
+        margin-top:12px; 
+        img{
+            display: block;
+            width: 1150px;
+            height: 150px;
+        }
+    }
+
+	.floor-header {
+	    position: relative;
+	    margin: 50px 0 30px;
+
+	    .floor-title {
+	        margin: 0 auto;
+	        width: 298px;
+	        height: 31px;
+	        line-height: 31px;
+	        border: 1px solid #000;
+	        font-size: 16px;
+	        text-align: center;
+	    }
+
+	    .header-navs {
+	        position: absolute;
+	        padding: 10px 0;
+	        top: 0;
+	        right: 0;
+	        font-size: 14px;
+
+	        li {
+	            float: left;
+	            padding: 1px 10px;
+	            border-left: 1px solid #ccc;
+
+	            &:first-child {
+	                border-left: none;
+	            }
+
+	            &:hover {
+	                text-decoration: underline;
+	            }
+
+	            a {
+	                color: #333;
+	            }
+	        }
+	    }
+	}
+
+	
+}
+
+
+@media screen and (min-width: 1150px) {
+.home-page {
+    width: 1150px;
+
+    .slide-wrapper {
+        height: 387px;
+    }
+
+    .debris-slider {
+        height: 510px;
+        .left-col {
+            margin-right: 10px;
+
+            a {
+                width: 280px;
+                height: 120px;
+            }
+
+            a:first-child {
+                height: 250px;
+            }
+        }
+
+        .center-col {
+            width: 570px;
+            height: 100%;
+            margin-right: 10px;
+        }
+
+        .right-col {
+            a {
+                width: 280px;
+                height: 120px;
+            }
+
+            a:first-child {
+                height: 380px;
+            }
+        }
+    }
+    .img-slider-wrapper {
+        height: 558px;
+    }
+
+    .img-container-landscape {
+        margin: 86px auto 0;
+        width: 982px;
+        height: 433px;
+
+        .img-item {
+            width: 320px;
+            margin-right: 10px;
+        }
+    }
+
+    .preference-brand-list {
+        width: 1158px;
+    }
+
+    .preference-brand-item {
+        margin-right: 8px;
+
+        a {
+            width: 185px;
+            height: 86px;
+        }
+    }
+
+    .preference-more {
+        width: 185px;
+        height: 86px;
+        line-height: 100px;
+    }
+
+    .categorys-list {
+        ul {
+            width: 1158px;
+        }
+        li {
+            margin: 0 8px 8px 0;
+            width: 185px;
+            height: 248px;
+
+            &.cate-item0 {
+                width: 185px;
+                height: 504px;
+            }
+            &.cate-item1 {
+                width: 377px;
+                height: 504px;
+            }
+        }
+    }
+    .floor-header {
+        margin: 80px 0 40px;
+
+        .header-navs {
+            li {
+                padding: 1px 15px;
+            }
+        }
+    }
+}
+}
+@import "_index-pliffy";

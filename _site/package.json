@@ -1,7 +1,7 @@
 {
-  "name": "fruitmobile",
+  "name": "yohobigfront",
   "version": "1.0.0",
-  "description": "fruitmobile ",
+  "description": "yohobigfront ",
   "main": "app.js",
   "scripts": {
     "test": "spm test",
@@ -12,8 +12,10 @@
   "spm": {
     "main": "index.js",
     "dependencies": {
-      "jquery": "1.8.3",
-      "lazyload": "1.9.6"
+      "yoho.lazyload": "1.0.0",
+      "yoho.handlebars": "3.0.3",
+      "yoho.jquery": "1.8.3",
+      "json2": "1.0.0"
     }
   },
   "devDependencies": {

@@ -1,0 +1,24 @@
+{
+  "name": "source-map",
+  "version": "1.0.2",
+  "description": "",
+  "keywords": [],
+  "homepage": "",
+  "author": "zPeter",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "licenses": "MIT",
+  "spm": {
+    "main": "source-map.js",
+    "dependencies": {
+    },
+    "devDependencies": {
+      "expect.js": "0.3.1"
+    }
+  }
+}

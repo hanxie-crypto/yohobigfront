@@ -1,0 +1,12 @@
+{{> index/floor-header}}
+<div class="categorys-list">
+    <ul class="clearfix">
+        {{# list}}
+        <li class="cate-item{{@index}}">
+            <a href="{{href}}">
+                <img class="lazy" data-original="{{img}}" alt="">
+            </a>
+        </li>
+        {{/ list}}
+    </ul>
+</div>

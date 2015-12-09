@@ -1,0 +1,92 @@
+<!-- {{> index/floor-header}}
+<div class="preference-brand">
+    <div class="img-slider-wrapper clearfix">
+        <div class="img-brand-switch">
+            <a class="prev iconfont" href="javascript:;">&#xe60f;</a>
+            <a class="next iconfont" href="javascript:;">&#xe60e;</a>
+        </div>
+        <div class="img-container-landscape">
+            <ul class="img-list">
+                {{# slider}}
+                <li  class="img-item">
+                    <a href="{{href}}"> <img src="{{img}}" alt="{{alt}}"></a>
+                </li>
+                {{/ slider}}
+             </ul>
+        </div>
+    </div>
+    <div class="preference-brand-list clearfix">
+        {{#list}}
+        <div class="preference-brand-item">
+            <a href="{{href}}">
+                <img class="lazy" data-original="{{img}}"></a>
+        </div>
+        {{/list}}
+        <a class="preference-more" href="{{moreBrands}}">MORE&gt;</a>
+    </div>
+</div> -->
+
+{{! 楼层头部}}
+{{> index/floor-header}}
+<div class="preference-brand">
+    <div class="img-slider-wrapper clearfix">
+        <div class="img-brand-switch">
+            <a class="prev iconfont" href="javascript:;">&#xe60f;</a>
+            <a class="next iconfont" href="javascript:;">&#xe60e;</a>
+        </div>
+        <div class="img-container-landscape">
+            <ul class="img-list">
+                {{# slider}}
+                <li  class="img-item">
+                    <a href="{{href}}"> <img src="{{img}}" alt="{{alt}}"></a>
+                </li>
+                {{/ slider}}
+             </ul>
+        </div>
+    </div>
+    <div class="logo-brand">
+        <ul class="clearfix">
+            {{# list}}
+            <li>
+                <a href="{{href}}">
+                    <img class="lazy" data-original="{{img}}" alt="">
+                </a>
+            </li>
+            {{/ list}}
+        </ul>
+    </div>
+    <!-- <div class="hot-brands clearfix">
+        <div class="brands-list">
+            <ul class="clearfix">
+                {{# list}}
+                <li>
+                    <a target="_blank" href="{{href}}">
+                        <img class="lazy" data-original="{{img}}">
+                    </a>
+                </li>
+                {{/ list}}
+            </ul>
+        </div>
+        <div class="brands-control">
+            <p class="control-btn">
+                <a class="iconfont prev" href="javascript:;">&#xe60a;</a>
+                <a class="iconfont next" href="javascript:;">&#xe609;</a>
+            </p>
+            <p class="all-brands">
+                <a target="_blank" href="{{allBrands}}">
+                    MORE>
+                </a>
+            </p>
+        </div>
+    </div> -->
+    <!--
+    <div class="preference-brand-list clearfix">
+        {{#list}}
+        <div class="preference-brand-item">
+            <a href="{{url}}">
+                <img class="lazy" data-original="{{img}}"></a>
+        </div>
+        {{/list}}
+        <a class="preference-more" href="{{moreBrands}}">MORE&gt;</a>
+    </div>-->
+</div>

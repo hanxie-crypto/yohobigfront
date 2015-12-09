@@ -25,7 +25,7 @@ var config = {
 		contenttype: 'application/json'
 	},
 	mockconfig: {
-		timeout: 0,
+		timeout: 2000,
 		contenttype: 'application/json'
 	}
 }

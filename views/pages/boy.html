@@ -1,0 +1,86 @@
+<div class="home-page yoho-page boys" data-page="boys" data-newarrivls='{"url":"/boys/commodity","pageCount":"4","flag":"boys"}'>
+{{# boys}}
+    {{! 头部banner}}
+    {{# slide}}
+        {{>index/slide_banner}} 
+    {{/ slide}}
+
+    {{! 新品速报}}
+    {{# newReport}}
+    <div class="new-report clearfix">
+        {{> index/floor_header}}
+
+        <ul class="report-list clearfix">
+            {{# list}}
+            {{#unless @last}}
+            <li>
+                <a href="{{href}}">
+                    <img class="lazy" data-original="{{img}}" alt="">
+                </a>
+            </li>
+            {{/unless}}
+            {{/ list}}
+        </ul>
+
+        {{# list}}
+        {{#if @last}}
+        <div class="last-item">
+            <a href="{{href}}">
+                <img class="lazy" data-original="{{img}}" alt="">
+            </a>
+        </div>
+        {{/if}}
+        {{/ list}}
+    </div>
+    {{/ newReport}}
+
+    {{! 优选品牌}}
+    {{# preferenceBrands}}
+    <div class="preference-brand">
+        {{> index/floor_header}}
+        <div class="img-brand">
+            <ul class="img-list clearfix">
+                {{# imgBrand}}
+                <li class="img-item">
+                    <a href="{{href}}">
+                        <img src="{{img}}" alt="">
+                    </a>
+                </li>
+                {{/ imgBrand}}
+            </ul>
+            <div class="img-brand-switch">
+                <a class="prev" href="javascript:;">
+                    <span class="iconfont">&#xe60c;</span>
+                </a>
+                <a class="next" href="javascript:;">
+                    <span class="iconfont">&#xe60b;</span>
+                </a>
+            </div>
+        </div>
+        <div class="logo-brand"></div>
+    </div>
+    {{/ preferenceBrands}}
+    
+    {{! 单品/广告}}  
+    {{# singlehot}}
+        {{> index/boy_singlehot}} 
+    {{/ singlehot}}
+
+    {{! 广告}}
+    {{# adbanner}}
+    <div class="adbanner">
+    <a class="impo{{@index}}" href="{{url}}"><img class="lazy" data-original="{{img}}"/></a>
+    </div>
+    {{/ adbanner}}
+
+    {{! 品类推荐}}  
+    {{# recommend}}
+        {{> index/boy_recommend}} 
+    {{/ recommend}}
+
+    {{! 新品上架}}
+    {{# newArrivls}}
+        {{> index/commodity}}
+    {{/ newArrivls}}
+{{/ boys}}
+</div>
