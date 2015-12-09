@@ -121,6 +121,7 @@ exports.textproxy = function(req, res, next) {
 }
 
 exports.boys = function(req, res, next) {
+	console.time('男首查询');
 	var ep = eventproxy.create();
 	yohoproxy.done('headernav', null, ep.doneLater('headernav'));
 	yohoproxy.done('gobuy', null, ep.doneLater('gobuy'));
@@ -145,6 +146,7 @@ exports.boys = function(req, res, next) {
 			boys.adbanner = adbanner.data;
 			boys.recommend = recommend.data;
 			boys.newArrivls = newarrivls.data;
+			console.timeEnd('男首查询');
 			res.render('pages/boy', {
 				title: '男首',
 				headerdata: headerdata,
@@ -153,4 +155,7 @@ exports.boys = function(req, res, next) {
 			});
 
 		});
+	ep.fail(function(err) {
+		next(err);
+	});
 }

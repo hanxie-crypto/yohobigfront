@@ -1,5 +1,5 @@
 var fs = require('fs');
-var path = require('path').resolve(__dirname, './');
+var path = require('path').resolve(__dirname, './jsondata');
 var fileList = [];
 var mockdataname = [];
 var mockdatamap = {}

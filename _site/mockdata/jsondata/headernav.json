@@ -1,0 +1,22 @@
+{
+    "navbars": [{
+        "name_cn": "男生",
+        "name_en": "BOYS",
+        "link": "",
+        "classname": "boys",
+        "index_main": 1,
+        "subnav": [{
+            "name": "男生1",
+            "link": "",
+            "index_sub": 0,
+            "thirdnav": [{
+                "title": "上装",
+                "branditems": [{
+                    "brandname": "背心",
+                    "link": "",
+                    "hot": true
+                }]
+            }]
+        }]
+    }]
+}
