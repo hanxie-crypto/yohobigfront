@@ -1,12 +1,9 @@
-{
-    "userlist": [{
-        "id": 1,
-        "username": "大大",
-        "age": 18
-    }, {
-        "id": 2,
-        "username": "白泡泡",
-        "age": 14
-    }]
-
-}
+[{
+    "id": 1,
+    "username": "大大",
+    "age": 18
+}, {
+    "id": 2,
+    "username": "白泡泡",
+    "age": 14
+}]

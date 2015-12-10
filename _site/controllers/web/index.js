@@ -11,6 +11,7 @@ var superagent = require('superagent');
 var yohoproxy = require('../../yohoproxy');
 // 首页 bigpipe实现
 exports.index = function(req, res, next) {
+	console.log('首页');
 	console.time('bigpipe&协同数据测试');
 	res.setHeader('content-type', 'text/html; charset=utf-8');
 	res.render('pages/index', {
@@ -36,7 +37,7 @@ exports.index = function(req, res, next) {
 		console.log(responsedata, '用户数据');
 		if (err) ep.throw(err);
 		res.render('partials/user', {
-			user: responsedata.data.userlist
+			user: responsedata.data
 		}, function(err, str1) {
 			if (err) ep.throw(err);
 			var temp = encodeURIComponent(str1);
@@ -52,7 +53,7 @@ exports.index = function(req, res, next) {
 		if (err) ep.throw(err);
 		console.log(responsedata, '订单数据');
 		res.render('partials/order', {
-			orderlist: responsedata.data.orderlist
+			orderlist: responsedata.data
 		}, function(err, str2) {
 			if (err) ep.throw(err);
 			var temp = encodeURIComponent(str2);
