@@ -155,7 +155,5 @@ exports.boys = function(req, res, next) {
 			});
 
 		});
-	ep.fail(function(err) {
-		next(err);
-	});
+	
 }

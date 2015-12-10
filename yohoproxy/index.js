@@ -1,1 +1,1 @@
-module.exports = require( './yohoproxydata' );
+module.exports = require( './lib/yohoproxydata' );

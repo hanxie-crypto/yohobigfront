@@ -1,5 +1,5 @@
 var superagent = require('superagent');
-var agentconfig = require('../config/global_config').agentconfig;
+var agentconfig = require('../../config/global_config').agentconfig;
 /**
  * post请求
  * @param  {[type]}   url      [description]

@@ -1,6 +1,6 @@
 var nock = require('nock');
-var mockconfig = require('../config/global_config').mockconfig;
-var mokdatamap = require('../mockdata');
+var mockconfig = require('../../config/global_config').mockconfig;
+var mokdatamap = require('../../mockdata');
 
 function YoHoMock(interfaceMap) {
     this._mockServerMap = {};

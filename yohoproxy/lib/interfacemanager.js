@@ -1,4 +1,4 @@
-var interfaces = require('../interface/interfaces');
+var interfaces = require('../../interface/interfaces');
 function InterfaceManager(path) {
     this._mockServerMap = {}; //模拟数据映射
     this._interfaceMap = {};//接口映射
