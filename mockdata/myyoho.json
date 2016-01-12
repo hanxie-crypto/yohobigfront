@@ -1,0 +1,31 @@
+{
+    "myyoho": {
+        "email": "caomei@163.com",
+        "viptype": "普通会员",
+        "currentscore": 495,
+        "totalscore": 600,
+        "cardtype": "银卡",
+        "infolist": [{
+            "name": "待处理的订单",
+            "link": "",
+            "num": "0"
+        }, {
+            "name": "我的收藏",
+            "link": "",
+            "num": "1"
+        }, {
+            "name": "我的优惠券",
+            "link": "",
+            "num": "2"
+        }, {
+            "name": "我的YOHO币",
+            "link": "",
+            "num": "1"
+        }, {
+            "name": "我的退货换货",
+            "link": "",
+            "num": "1"
+        }],
+        "updlink": ""
+    }
+}
